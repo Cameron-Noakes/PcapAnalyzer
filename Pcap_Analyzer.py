@@ -1,6 +1,12 @@
 from scapy.all import *
 import csv
 
+# AUTHOR Cameron Noakes.
+# This python script will take a PCAP file on localhost computer and parse it into the script which
+# will extract the Source and Destination IP addresses and protocols and store them in an external
+# CSV file using the scapy library.
+
+
 # File name of the PCAP file
 pcap_file = "PCAP_General.pcap"
 
@@ -28,3 +34,4 @@ with open(csv_file, 'w', newline='') as csvfile:
         csvwriter.writerow([src_ip, src_mac, dst_ip, dst_mac, protocol])
 
 print("Data is written to the csv file.")
+
